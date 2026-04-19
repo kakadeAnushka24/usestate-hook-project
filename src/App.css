@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #e79e9e, #ebedee);
+}
+
+.container {
+  text-align: center;
+  padding: 40px;
+}
+
+.title {
+  margin-bottom: 40px;
+  font-size: 32px;
+  color: #0f0f0f;
+}
+
+/* CARD LAYOUT */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* CARD DESIGN */
+.card {
+  position: relative;
+  width: 260px;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(114, 113, 113, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: 0.4s;
+  border: #0f0f0f solid 1px;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  transform: translateY(-10px) scale(1.04);
+}
+
+/* BADGE */
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff6ec4;
+  color: rgb(19, 19, 19);
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+}
+
+/* EMOJI */
+.emoji {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* PRICE */
+.price {
+  font-size: 20px;
+  color: #6a11cb;
+  font-weight: bold;
+}
+
+/* QUANTITY BOX */
+.quantity-box {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* BUTTONS */
+.btn {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+.plus {
+  background: linear-gradient(45deg, #00c853, #64dd17);
+}
+
+.minus {
+  background: linear-gradient(45deg, #ff1744, #ff616f);
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* QUANTITY */
+.quantity {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(12, 12, 12);
+}
