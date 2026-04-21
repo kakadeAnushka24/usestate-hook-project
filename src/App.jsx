@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1 className="title">✨ Flower Boutique</h1>
+      <h1 className="title">The Flower Hub!!!!!!</h1>
 
       <div className="card-container">
         {products.map((product) => (
