@@ -20,9 +20,10 @@ function App() {
             <div className="emoji">{product.emoji}</div>
 
             <h2>{product.name}</h2>
-            <p className="price">₹{product.price}</p>
 
-            <QuantityHandler />
+            {/* 👉 price pass karto */}
+            <QuantityHandler price={product.price} />
+
           </div>
         ))}
       </div>
@@ -30,7 +31,7 @@ function App() {
   );
 }
 
-function QuantityHandler() {
+function QuantityHandler({ price }) {
   const [quantity, setQuantity] = useState(0);
 
   const increment = () => setQuantity(quantity + 1);
@@ -41,10 +42,19 @@ function QuantityHandler() {
     }
   };
 
+  // 👉 dynamic price
+  const finalPrice = quantity > 0 ? quantity * price : price;
+
   return (
     <div className="quantity-box">
+      
+      {/* 👉 price yethun control hoto */}
+      <p className="price">₹{finalPrice}</p>
+
       <button className="btn minus" onClick={decrement}>-</button>
+      
       <span className="quantity">{quantity}</span>
+      
       <button className="btn plus" onClick={increment}>+</button>
     </div>
   );
